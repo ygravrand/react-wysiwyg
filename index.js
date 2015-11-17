@@ -37,7 +37,8 @@ var ContentEditable = React.createClass({
     onItalic: React.PropTypes.func,
     onKeyDown: React.PropTypes.func,
     onKeyPress: React.PropTypes.func,
-    placeholderStyle: React.PropTypes.object
+    placeholderStyle: React.PropTypes.object,
+    autoFocus: React.PropTypes.bool
   },
 
   getDefaultProps: function() {
@@ -48,7 +49,8 @@ var ContentEditable = React.createClass({
       onBold: noop,
       onItalic: noop,
       onKeyDown: noop,
-      onKeyPress: noop
+      onKeyPress: noop,
+      autoFocus: false
     };
   },
 
@@ -92,6 +94,12 @@ var ContentEditable = React.createClass({
     if (this._range) {
       selectionRange(ReactDOM.findDOMNode(this), this._range)
       delete this._range
+    }
+  },
+
+  componentDidMount: function(){
+    if (this.props.autoFocus){
+        this.autofocus();
     }
   },
 
