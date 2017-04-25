@@ -4,6 +4,8 @@
 
 var React = require('react')
 var ReactDOM = require('react-dom')
+var PropTypes = require('prop-types')
+var createClass = require('create-react-class')
 var classNames = require('classnames')
 var escapeHTML = require('escape-html')
 var isServer = typeof window === 'undefined'
@@ -18,26 +20,26 @@ var noop = function(){}
  * Make a contenteditable element
  */
 
-var ContentEditable = React.createClass({
+var ContentEditable = createClass({
 
   propTypes: {
-    editing: React.PropTypes.bool,
-    html: React.PropTypes.string,
-    onChange: React.PropTypes.func.isRequired,
-    placeholder: React.PropTypes.bool,
-    placeholderText: React.PropTypes.string,
-    tagName: React.PropTypes.string,
-    onEnterKey: React.PropTypes.func,
-    onEscapeKey: React.PropTypes.func,
-    preventStyling: React.PropTypes.bool,
-    noLinebreaks: React.PropTypes.bool,
-    onBlur: React.PropTypes.func,
-    onFocus: React.PropTypes.func,
-    onBold: React.PropTypes.func,
-    onItalic: React.PropTypes.func,
-    onKeyDown: React.PropTypes.func,
-    onKeyPress: React.PropTypes.func,
-    placeholderStyle: React.PropTypes.object
+    editing: PropTypes.bool,
+    html: PropTypes.string,
+    onChange: PropTypes.func.isRequired,
+    placeholder: PropTypes.bool,
+    placeholderText: PropTypes.string,
+    tagName: PropTypes.string,
+    onEnterKey: PropTypes.func,
+    onEscapeKey: PropTypes.func,
+    preventStyling: PropTypes.bool,
+    noLinebreaks: PropTypes.bool,
+    onBlur: PropTypes.func,
+    onFocus: PropTypes.func,
+    onBold: PropTypes.func,
+    onItalic: PropTypes.func,
+    onKeyDown: PropTypes.func,
+    onKeyPress: PropTypes.func,
+    placeholderStyle: PropTypes.object
   },
 
   getDefaultProps: function() {

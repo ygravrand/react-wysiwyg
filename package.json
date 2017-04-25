@@ -44,9 +44,11 @@
   },
   "dependencies": {
     "classnames": "^2.1.1",
+    "create-react-class": "^15.5.2",
     "escape-html": "^1.0.2",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.2",
+    "react-dom": "^15.5.2",
     "selection-range": "^1.0.1"
   },
   "jest": {
