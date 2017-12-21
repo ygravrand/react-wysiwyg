@@ -293,7 +293,7 @@ var ContentEditable = createClass({
     e.preventDefault();
     var data = e.clipboardData.getData('text/plain')
     this._replaceCurrentSelection(data);
-    var target = React.findDOMNode(this)
+    var target = ReactDOM.findDOMNode(this)
     this.props.onChange(target.textContent, false, target)
   },
 
